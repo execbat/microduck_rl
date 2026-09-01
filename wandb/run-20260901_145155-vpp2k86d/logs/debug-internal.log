@@ -1,0 +1,6 @@
+{"time":"2026-09-01T14:51:56.24835608+01:00","level":"INFO","msg":"stream: starting","core version":"0.24.0"}
+{"time":"2026-09-01T14:51:56.567303212+01:00","level":"INFO","msg":"stream: created new stream","id":"vpp2k86d"}
+{"time":"2026-09-01T14:51:56.567392628+01:00","level":"INFO","msg":"stream: started","id":"vpp2k86d"}
+{"time":"2026-09-01T14:51:56.567431116+01:00","level":"INFO","msg":"handler: started","stream_id":"vpp2k86d"}
+{"time":"2026-09-01T14:51:56.56743869+01:00","level":"INFO","msg":"writer: started","stream_id":"vpp2k86d"}
+{"time":"2026-09-01T14:51:56.567457114+01:00","level":"INFO","msg":"sender: started","stream_id":"vpp2k86d"}

@@ -31,7 +31,7 @@ from .microduck_ground_pick_env_cfg import (
     make_microduck_ground_pick_env_cfg,
     MicroduckGroundPickRlCfg,
 )
-from .microduck_ball_kick_env_cfg import (
+from .ball_kick import (
     make_microduck_ball_kick_env_cfg,
     MicroduckBallKickRlCfg,
 )
