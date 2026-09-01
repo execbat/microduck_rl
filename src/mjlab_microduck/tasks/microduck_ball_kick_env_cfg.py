@@ -125,7 +125,7 @@ from mjlab_microduck.robot.microduck_constants import (
     MICRODUCK_STANDUP_ROBOT_CFG,
 )
 from mjlab_microduck.tasks import mdp as microduck_mdp
-from mjlab_microduck.tasks.microduck_velocity_env_cfg import HEAD_BODY_NAMES
+from mjlab_microduck.tasks.velocity import HEAD_BODY_NAMES
 from mjlab_microduck.tasks.symmetry import PpoWithSymmetryCfg, SYMMETRY_CFG
 
 

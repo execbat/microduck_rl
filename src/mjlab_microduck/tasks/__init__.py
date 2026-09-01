@@ -15,7 +15,7 @@ class MicroduckOnPolicyRunner(VelocityOnPolicyRunner):
             alg["symmetry_cfg"] = {k: v for k, v in sym.items() if k != "_env"}
 
 
-from .microduck_velocity_env_cfg import (
+from .velocity import (
     make_microduck_velocity_env_cfg,
     MicroduckRlCfg,
 )

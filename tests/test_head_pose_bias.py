@@ -155,7 +155,7 @@ def test_standup_cfg_wiring():
 
 
 def test_velocity_cfg_unchanged_no_gate():
-    from mjlab_microduck.tasks.microduck_velocity_env_cfg import (
+    from mjlab_microduck.tasks.velocity import (
         make_microduck_velocity_env_cfg,
     )
 
