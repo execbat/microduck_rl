@@ -55,7 +55,7 @@ from .roller_slope import (
     make_microduck_roller_slope_env_cfg,
     MicroduckRollerSlopeRlCfg,
 )
-from .microduck_roller_standup_env_cfg import (
+from .roller_standup import (
     make_microduck_roller_standup_env_cfg,
     MicroduckRollerStandUpRlCfg,
 )
