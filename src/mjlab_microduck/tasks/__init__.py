@@ -19,7 +19,7 @@ from .velocity import (
     make_microduck_velocity_env_cfg,
     MicroduckRlCfg,
 )
-from .microduck_standup_env_cfg import (
+from .standup import (
     make_microduck_standup_env_cfg,
     MicroduckStandUpRlCfg,
 )

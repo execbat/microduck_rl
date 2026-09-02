@@ -1,0 +1,309 @@
+Storing git diff for 'microduck_rl' in: logs/rsl_rl/microduck_stand/2026-09-02_11-18-40_microduck_stand/git/microduck_rl.diff
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+################################################################################
+[1m                             Learning iteration 0/5                             [0m
+
+                               Run name: microduck_stand
+                            Total steps: 24
+                       Steps per second: 20
+                        Collection time: 0.985s
+                          Learning time: 0.202s
+                        Mean value loss: 0.0782
+                    Mean surrogate loss: -0.0946
+                      Mean entropy loss: 19.8610
+                            Mean reward: -1.13
+                    Mean episode length: 17.00
+                        Mean action std: 1.00
+            Episode_Reward/body_ang_vel: -0.0235
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0002
+          Episode_Reward/action_rate_l2: -0.0522
+         Episode_Reward/pose_stand_legs: 0.0290
+      Episode_Reward/head_pose_tracking: 0.0076
+          Episode_Reward/head_pose_bias: 0.0000
+           Episode_Reward/pose_stand_l1: -0.0057
+            Episode_Reward/height_stand: 0.0000
+      Episode_Reward/height_stand_sharp: 0.0000
+         Episode_Reward/height_stand_l1: -0.0399
+     Episode_Reward/com_upward_velocity: 0.0001
+             Episode_Reward/gentle_rise: -0.0005
+         Episode_Reward/arrival_damping: 0.0000
+          Episode_Reward/upright_linear: 0.0228
+           Episode_Reward/upright_sharp: 0.0000
+      Episode_Reward/standing_composite: 0.0000
+      Episode_Reward/body_pose_tracking: 0.0000
+    Episode_Reward/joint_torque_rate_l2: 0.0000
+         Episode_Reward/self_collisions: 0.0000
+         Curriculum/terrain_levels/mean: 4.0000
+          Curriculum/terrain_levels/max: 4.0000
+            Curriculum/ground_state_mix: 0.4000
+             Curriculum/head_pose_range: 0.0700
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+              Curriculum/push_magnitude: 0.0000
+          Curriculum/action_rate_weight: -0.1000
+      Curriculum/arrival_damping_weight: 0.0000
+       Curriculum/head_pose_bias_weight: 0.0000
+          Curriculum/torque_rate_weight: 0.0000
+   Curriculum/body_pose_tracking_weight: 0.0000
+             Curriculum/body_pose_range: 0.0500
+   Curriculum/height_stand_sharp_weight: 1.0000
+        Curriculum/upright_sharp_weight: 1.5000
+   Curriculum/standing_composite_weight: 3.7500
+             Metrics/twist/error_vel_xy: 0.0016
+            Metrics/twist/error_vel_yaw: 0.0032
+           Episode_Termination/time_out: 0.3333
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0121
+--------------------------------------------------------------------------------
+                         Iteration time: 1.19s
+                           Time elapsed: 00:00:01
+                                    ETA: 00:00:04
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+
+################################################################################
+[1m                             Learning iteration 1/5                             [0m
+
+                               Run name: microduck_stand
+                            Total steps: 48
+                       Steps per second: 36
+                        Collection time: 0.584s
+                          Learning time: 0.080s
+                        Mean value loss: 0.1464
+                    Mean surrogate loss: -0.0551
+                      Mean entropy loss: 19.8612
+                            Mean reward: -1.13
+                    Mean episode length: 17.00
+                        Mean action std: 1.00
+            Episode_Reward/body_ang_vel: -0.0705
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0005
+          Episode_Reward/action_rate_l2: -0.1565
+         Episode_Reward/pose_stand_legs: 0.0871
+      Episode_Reward/head_pose_tracking: 0.0227
+          Episode_Reward/head_pose_bias: 0.0000
+           Episode_Reward/pose_stand_l1: -0.0172
+            Episode_Reward/height_stand: 0.0000
+      Episode_Reward/height_stand_sharp: 0.0000
+         Episode_Reward/height_stand_l1: -0.1198
+     Episode_Reward/com_upward_velocity: 0.0002
+             Episode_Reward/gentle_rise: -0.0016
+         Episode_Reward/arrival_damping: 0.0000
+          Episode_Reward/upright_linear: 0.0684
+           Episode_Reward/upright_sharp: 0.0000
+      Episode_Reward/standing_composite: 0.0000
+      Episode_Reward/body_pose_tracking: 0.0000
+    Episode_Reward/joint_torque_rate_l2: 0.0000
+         Episode_Reward/self_collisions: 0.0000
+         Curriculum/terrain_levels/mean: 4.0000
+          Curriculum/terrain_levels/max: 4.0000
+            Curriculum/ground_state_mix: 0.4000
+             Curriculum/head_pose_range: 0.0700
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+              Curriculum/push_magnitude: 0.0000
+          Curriculum/action_rate_weight: -0.1000
+      Curriculum/arrival_damping_weight: 0.0000
+       Curriculum/head_pose_bias_weight: 0.0000
+          Curriculum/torque_rate_weight: 0.0000
+   Curriculum/body_pose_tracking_weight: 0.0000
+             Curriculum/body_pose_range: 0.0500
+   Curriculum/height_stand_sharp_weight: 1.0000
+        Curriculum/upright_sharp_weight: 1.5000
+   Curriculum/standing_composite_weight: 3.7500
+             Metrics/twist/error_vel_xy: 0.0047
+            Metrics/twist/error_vel_yaw: 0.0096
+           Episode_Termination/time_out: 1.0000
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0077
+--------------------------------------------------------------------------------
+                         Iteration time: 0.66s
+                           Time elapsed: 00:00:01
+                                    ETA: 00:00:02
+
+################################################################################
+[1m                             Learning iteration 2/5                             [0m
+
+                               Run name: microduck_stand
+                            Total steps: 72
+                       Steps per second: 36
+                        Collection time: 0.588s
+                          Learning time: 0.077s
+                        Mean value loss: 0.2043
+                    Mean surrogate loss: -0.1143
+                      Mean entropy loss: 19.8626
+                            Mean reward: -1.13
+                    Mean episode length: 17.00
+                        Mean action std: 1.00
+            Episode_Reward/body_ang_vel: -0.0705
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0005
+          Episode_Reward/action_rate_l2: -0.1565
+         Episode_Reward/pose_stand_legs: 0.0871
+      Episode_Reward/head_pose_tracking: 0.0227
+          Episode_Reward/head_pose_bias: 0.0000
+           Episode_Reward/pose_stand_l1: -0.0172
+            Episode_Reward/height_stand: 0.0000
+      Episode_Reward/height_stand_sharp: 0.0000
+         Episode_Reward/height_stand_l1: -0.1198
+     Episode_Reward/com_upward_velocity: 0.0002
+             Episode_Reward/gentle_rise: -0.0016
+         Episode_Reward/arrival_damping: 0.0000
+          Episode_Reward/upright_linear: 0.0684
+           Episode_Reward/upright_sharp: 0.0000
+      Episode_Reward/standing_composite: 0.0000
+      Episode_Reward/body_pose_tracking: 0.0000
+    Episode_Reward/joint_torque_rate_l2: 0.0000
+         Episode_Reward/self_collisions: 0.0000
+         Curriculum/terrain_levels/mean: 4.0000
+          Curriculum/terrain_levels/max: 4.0000
+            Curriculum/ground_state_mix: 0.4000
+             Curriculum/head_pose_range: 0.0700
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+              Curriculum/push_magnitude: 0.0000
+          Curriculum/action_rate_weight: -0.1000
+      Curriculum/arrival_damping_weight: 0.0000
+       Curriculum/head_pose_bias_weight: 0.0000
+          Curriculum/torque_rate_weight: 0.0000
+   Curriculum/body_pose_tracking_weight: 0.0000
+             Curriculum/body_pose_range: 0.0500
+   Curriculum/height_stand_sharp_weight: 1.0000
+        Curriculum/upright_sharp_weight: 1.5000
+   Curriculum/standing_composite_weight: 3.7500
+             Metrics/twist/error_vel_xy: 0.0047
+            Metrics/twist/error_vel_yaw: 0.0096
+           Episode_Termination/time_out: 1.0000
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0059
+--------------------------------------------------------------------------------
+                         Iteration time: 0.67s
+                           Time elapsed: 00:00:02
+                                    ETA: 00:00:01
+
+################################################################################
+[1m                             Learning iteration 3/5                             [0m
+
+                               Run name: microduck_stand
+                            Total steps: 96
+                       Steps per second: 34
+                        Collection time: 0.619s
+                          Learning time: 0.086s
+                        Mean value loss: 0.2894
+                    Mean surrogate loss: -0.1102
+                      Mean entropy loss: 19.8657
+                            Mean reward: -1.13
+                    Mean episode length: 17.00
+                        Mean action std: 1.00
+            Episode_Reward/body_ang_vel: -0.0705
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0005
+          Episode_Reward/action_rate_l2: -0.1565
+         Episode_Reward/pose_stand_legs: 0.0871
+      Episode_Reward/head_pose_tracking: 0.0227
+          Episode_Reward/head_pose_bias: 0.0000
+           Episode_Reward/pose_stand_l1: -0.0172
+            Episode_Reward/height_stand: 0.0000
+      Episode_Reward/height_stand_sharp: 0.0000
+         Episode_Reward/height_stand_l1: -0.1198
+     Episode_Reward/com_upward_velocity: 0.0002
+             Episode_Reward/gentle_rise: -0.0016
+         Episode_Reward/arrival_damping: 0.0000
+          Episode_Reward/upright_linear: 0.0684
+           Episode_Reward/upright_sharp: 0.0000
+      Episode_Reward/standing_composite: 0.0000
+      Episode_Reward/body_pose_tracking: 0.0000
+    Episode_Reward/joint_torque_rate_l2: 0.0000
+         Episode_Reward/self_collisions: 0.0000
+         Curriculum/terrain_levels/mean: 4.0000
+          Curriculum/terrain_levels/max: 4.0000
+            Curriculum/ground_state_mix: 0.4000
+             Curriculum/head_pose_range: 0.0700
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+              Curriculum/push_magnitude: 0.0000
+          Curriculum/action_rate_weight: -0.1000
+      Curriculum/arrival_damping_weight: 0.0000
+       Curriculum/head_pose_bias_weight: 0.0000
+          Curriculum/torque_rate_weight: 0.0000
+   Curriculum/body_pose_tracking_weight: 0.0000
+             Curriculum/body_pose_range: 0.0500
+   Curriculum/height_stand_sharp_weight: 1.0000
+        Curriculum/upright_sharp_weight: 1.5000
+   Curriculum/standing_composite_weight: 3.7500
+             Metrics/twist/error_vel_xy: 0.0047
+            Metrics/twist/error_vel_yaw: 0.0096
+           Episode_Termination/time_out: 1.0000
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0196
+--------------------------------------------------------------------------------
+                         Iteration time: 0.71s
+                           Time elapsed: 00:00:03
+                                    ETA: 00:00:00
+
+################################################################################
+[1m                             Learning iteration 4/5                             [0m
+
+                               Run name: microduck_stand
+                            Total steps: 120
+                       Steps per second: 34
+                        Collection time: 0.607s
+                          Learning time: 0.088s
+                        Mean value loss: 0.2497
+                    Mean surrogate loss: -0.1120
+                      Mean entropy loss: 19.8684
+                            Mean reward: -1.13
+                    Mean episode length: 17.00
+                        Mean action std: 1.00
+            Episode_Reward/body_ang_vel: -0.0705
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0005
+          Episode_Reward/action_rate_l2: -0.1565
+         Episode_Reward/pose_stand_legs: 0.0871
+      Episode_Reward/head_pose_tracking: 0.0227
+          Episode_Reward/head_pose_bias: 0.0000
+           Episode_Reward/pose_stand_l1: -0.0172
+            Episode_Reward/height_stand: 0.0000
+      Episode_Reward/height_stand_sharp: 0.0000
+         Episode_Reward/height_stand_l1: -0.1198
+     Episode_Reward/com_upward_velocity: 0.0002
+             Episode_Reward/gentle_rise: -0.0016
+         Episode_Reward/arrival_damping: 0.0000
+          Episode_Reward/upright_linear: 0.0684
+           Episode_Reward/upright_sharp: 0.0000
+      Episode_Reward/standing_composite: 0.0000
+      Episode_Reward/body_pose_tracking: 0.0000
+    Episode_Reward/joint_torque_rate_l2: 0.0000
+         Episode_Reward/self_collisions: 0.0000
+         Curriculum/terrain_levels/mean: 4.0000
+          Curriculum/terrain_levels/max: 4.0000
+            Curriculum/ground_state_mix: 0.4000
+             Curriculum/head_pose_range: 0.0700
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+              Curriculum/push_magnitude: 0.0000
+          Curriculum/action_rate_weight: -0.1000
+      Curriculum/arrival_damping_weight: 0.0000
+       Curriculum/head_pose_bias_weight: 0.0000
+          Curriculum/torque_rate_weight: 0.0000
+   Curriculum/body_pose_tracking_weight: 0.0000
+             Curriculum/body_pose_range: 0.0500
+   Curriculum/height_stand_sharp_weight: 1.0000
+        Curriculum/upright_sharp_weight: 1.5000
+   Curriculum/standing_composite_weight: 3.7500
+             Metrics/twist/error_vel_xy: 0.0047
+            Metrics/twist/error_vel_yaw: 0.0096
+           Episode_Termination/time_out: 1.0000
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0114
+--------------------------------------------------------------------------------
+                         Iteration time: 0.69s
+                           Time elapsed: 00:00:03
+                                    ETA: 00:00:00
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
