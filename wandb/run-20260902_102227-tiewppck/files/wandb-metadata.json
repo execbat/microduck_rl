@@ -1,0 +1,47 @@
+{
+  "os": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.12.14",
+  "startedAt": "2026-09-02T09:22:27.332657Z",
+  "args": [
+    "Mjlab-SitStand-Flat-MicroDuck",
+    "--env.scene.num-envs",
+    "16",
+    "--agent.max-iterations",
+    "5"
+  ],
+  "program": "/home/johnny/Documents/ISAACLAB/microduck_rl/.venv/bin/train",
+  "codePath": ".venv/bin/train",
+  "codePathLocal": ".venv/bin/train",
+  "git": {
+    "remote": "git@github.com:execbat/microduck_rl.git",
+    "commit": "2ab0ef485b2e438babdd207218e3814e81209775"
+  },
+  "email": "evgeniyy.dushkin@gmail.com",
+  "root": "/home/johnny/Documents/ISAACLAB/microduck_rl",
+  "host": "johnny-Precision-7540",
+  "executable": "/home/johnny/Documents/ISAACLAB/microduck_rl/.venv/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 8,
+  "gpu": "Quadro RTX 4000",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "982820896768",
+      "used": "863500566528"
+    }
+  },
+  "memory": {
+    "total": "33389330432"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "Quadro RTX 4000",
+      "memoryTotal": "8589934592",
+      "cudaCores": 2560,
+      "architecture": "Turing",
+      "uuid": "GPU-8fd11bdf-b0f0-4c30-d1e0-5732b8ac8a63"
+    }
+  ],
+  "cudaVersion": "12.8",
+  "writerId": "1l13il7mmq91xc2ff5xcpzp221brz9gi"
+}

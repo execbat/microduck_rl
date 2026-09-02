@@ -35,7 +35,7 @@ from .ball_kick import (
     make_microduck_ball_kick_env_cfg,
     MicroduckBallKickRlCfg,
 )
-from .microduck_sitstand_env_cfg import (
+from .sitstand import (
     make_microduck_sitstand_env_cfg,
     MicroduckSitStandRlCfg,
 )
