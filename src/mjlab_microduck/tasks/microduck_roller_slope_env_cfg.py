@@ -21,7 +21,7 @@ from mjlab.terrains.terrain_generator import TerrainGeneratorCfg
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.slope_terrain import FlatRampTerrainCfg, RAMP_DEG_MAX
-from mjlab_microduck.tasks.microduck_velocity_rollers_env_cfg import (
+from mjlab_microduck.tasks.velocity_rollers import (
     make_microduck_velocity_rollers_env_cfg,
 )
 from mjlab_microduck.tasks.symmetry import PpoWithSymmetryCfg

@@ -39,7 +39,7 @@ from .microduck_sitstand_env_cfg import (
     make_microduck_sitstand_env_cfg,
     MicroduckSitStandRlCfg,
 )
-from .microduck_velocity_rollers_env_cfg import (
+from .velocity_rollers import (
     make_microduck_velocity_rollers_env_cfg,
     MicroduckRollersRlCfg,
 )

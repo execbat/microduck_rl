@@ -42,7 +42,7 @@ from mjlab.managers.scene_entity_config import SceneEntityCfg
 from mjlab.rl import RslRlModelCfg, RslRlOnPolicyRunnerCfg
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
-from mjlab_microduck.tasks.microduck_velocity_rollers_env_cfg import (
+from mjlab_microduck.tasks.velocity_rollers import (
     make_microduck_velocity_rollers_env_cfg,
 )
 from mjlab_microduck.tasks.symmetry import PpoWithSymmetryCfg
