@@ -41,3 +41,5 @@ logdir/
 logdir/.claude/worktrees/
 
 microduck_tasks_rewards_penalties_events.xlsx
+/logs/
+/wandb/
