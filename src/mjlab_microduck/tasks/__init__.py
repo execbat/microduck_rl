@@ -63,7 +63,7 @@ from .microduck_spin_env_cfg import (
     make_microduck_spin_env_cfg,
     MicroduckSpinRlCfg,
 )
-from .microduck_roulade_env_cfg import (
+from .roulade import (
     make_microduck_roulade_env_cfg,
     MicroduckRouladeRlCfg,
 )
