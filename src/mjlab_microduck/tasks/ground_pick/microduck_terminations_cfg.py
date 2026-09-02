@@ -1,0 +1,13 @@
+"""Termination specifications for the Microduck ground_pick task."""
+
+from mjlab.managers.termination_manager import TerminationTermCfg as DoneTerm
+
+from mjlab_microduck.tasks import mdp as microduck_mdp
+from mjlab_microduck.tasks.velocity.cfg.terminations_cfg import TerminationsCfg
+from mjlab_microduck.utils.configclass import configclass
+
+
+@configclass
+class MicroduckTerminationsCfg(TerminationsCfg):
+    # Terminate on NaN physics (extreme contact impulses) before it corrupts obs.
+    nan_state: DoneTerm | None = DoneTerm(func=microduck_mdp.robot_state_is_nan, time_out=False)

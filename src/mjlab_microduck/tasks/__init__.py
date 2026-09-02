@@ -27,7 +27,7 @@ from .microduck_velstand_env_cfg import (
     make_microduck_velstand_env_cfg,
     MicroduckVelStandRlCfg,
 )
-from .microduck_ground_pick_env_cfg import (
+from .ground_pick import (
     make_microduck_ground_pick_env_cfg,
     MicroduckGroundPickRlCfg,
 )
