@@ -15,7 +15,7 @@ from mjlab.tasks.velocity import mdp
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.roulade.microduck_flags import LANDING_GATE_HI, LANDING_GATE_LO, LEG_JOINTS, RISE_GATE_HI, RISE_GATE_LO, STAND_Z
-from mjlab_microduck.tasks.velocity.cfg.rewards_cfg import RewardsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.rewards_cfg import RewardsCfg
 from mjlab_microduck.utils.configclass import configclass
 
 

@@ -16,7 +16,7 @@ from mjlab.tasks.velocity import mdp
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.utils.configclass import configclass
 
-from .cfg.events_cfg import EventsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.events_cfg import EventsCfg
 from .microduck_flags import (
     ARMATURE_RANDOMIZATION_RANGE,
     BASE_ORIENTATION_MAX_PITCH_DEG,

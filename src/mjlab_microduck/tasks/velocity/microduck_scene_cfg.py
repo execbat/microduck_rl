@@ -69,8 +69,8 @@ foot_height_scan_cfg = TerrainHeightSensorCfg(
 MICRODUCK_ROUGH_TERRAINS_CFG = TerrainGeneratorCfg(
     size=(8.0, 8.0),
     border_width=20.0,
-    num_rows=10,
-    num_cols=20,
+    num_rows=2, #10,
+    num_cols=2, #20,
     sub_terrains={
         "flat": terrain_gen.BoxFlatTerrainCfg(proportion=0.25),
         "pyramid_stairs": terrain_gen.BoxPyramidStairsTerrainCfg(

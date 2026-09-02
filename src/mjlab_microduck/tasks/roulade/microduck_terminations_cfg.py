@@ -8,7 +8,7 @@ inherited unchanged from the base ``TerminationsCfg``).
 from mjlab.managers.termination_manager import TerminationTermCfg as DoneTerm
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
-from mjlab_microduck.tasks.velocity.cfg.terminations_cfg import TerminationsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.terminations_cfg import TerminationsCfg
 from mjlab_microduck.utils.configclass import configclass
 
 

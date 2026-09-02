@@ -23,7 +23,7 @@ tasks/roller_crouch/
   microduck_events_cfg.py               # MicroduckEventsCfg(EventsCfg)
   microduck_terminations_cfg.py         # MicroduckTerminationsCfg(TerminationsCfg)
   microduck_curriculum_cfg.py           # MicroduckCurriculumCfg(CurriculumCfg)
-  microduck_roller_crouch_env_cfg.py    # MicroduckRollerCrouchEnvCfg(LocomotionVelocityRoughEnvCfg)
+  microduck_roller_crouch_env_cfg.py    # MicroduckRollerCrouchEnvCfg(LocomotionVelocityFlatEnvCfg)
                                          # + make_microduck_roller_crouch_env_cfg()
   microduck_rl_cfg.py                   # MicroduckRollerCrouchRlCfg (RSL-RL PPO)
   __init__.py
@@ -58,7 +58,7 @@ factory function). This matters for the restructure:
   `rel_heading_envs` are overridden, then the command TYPE is swapped
   entirely to `GroundPickPhaseCommandCfg`. Building this file from a copy of
   `roller_crouch`'s sibling `commands_cfg.py` would have silently pulled in
-  the wrong base ranges — caught by re-deriving from `tasks/velocity/cfg/
+  the wrong base ranges — caught by re-deriving from `tasks/locomotion/velocity/cfg/
   commands_cfg.py` (the actual original base) instead, and called out in
   this file's own docstring so a future editor doesn't "simplify" it into
   inheriting from velocity_rollers's version.

@@ -15,7 +15,7 @@ solid (see ``head_pose_range``/``head_pose_tracking_weight`` in
 """
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
-from mjlab_microduck.tasks.velocity.cfg.commands_cfg import CommandsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.commands_cfg import CommandsCfg
 from mjlab_microduck.tasks.velocity_swizzle.microduck_flags import HEAD_POSE_INITIAL_RANGES
 from mjlab_microduck.utils.configclass import configclass
 

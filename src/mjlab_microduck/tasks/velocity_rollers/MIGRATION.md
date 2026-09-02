@@ -24,17 +24,16 @@ tasks/velocity_rollers/
   microduck_events_cfg.py                # MicroduckEventsCfg(EventsCfg)
   microduck_terminations_cfg.py          # MicroduckTerminationsCfg(TerminationsCfg)
   microduck_curriculum_cfg.py            # MicroduckCurriculumCfg(CurriculumCfg)
-  microduck_velocity_rollers_env_cfg.py  # MicroduckVelocityRollersEnvCfg(LocomotionVelocityRoughEnvCfg)
+  microduck_velocity_rollers_env_cfg.py  # MicroduckVelocityRollersEnvCfg(LocomotionVelocityFlatEnvCfg)
                                           # + make_microduck_velocity_rollers_env_cfg()
   microduck_rl_cfg.py                    # MicroduckRollersRlCfg (RSL-RL PPO)
   __init__.py
 ```
 
 No new `cfg/` folder here either — like `ball_kick`, this task reuses the
-generic base component files under `tasks/velocity/cfg/` (it's built on
+generic base component files under `tasks/locomotion/velocity/cfg/` (it's built on
 mjlab's `make_velocity_env_cfg()` too, just like the original file was), by
-subclassing `tasks.velocity.locomotion_velocity_env_cfg.LocomotionVelocity
-RoughEnvCfg` directly.
+subclassing `tasks.locomotion.velocity.LocomotionVelocityFlatEnvCfg` directly.
 
 **No structural play variant.** Unlike `velocity`, this task's old function
 took a `play: bool = False` parameter that was **never referenced anywhere
@@ -125,4 +124,4 @@ more data point:
    already have their `.Ranges`/`.VizCfg` nested classes via inheriting
    from `UniformVelocityCommandCfg` — no need to redeclare them, just
    reference `SomeCommandCfg.Ranges(...)` the same way the base
-   `tasks/velocity/cfg/commands_cfg.py` does.
+   `tasks/locomotion/velocity/cfg/commands_cfg.py` does.

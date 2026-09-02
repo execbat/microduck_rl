@@ -12,6 +12,7 @@ NaN reached the runner.
 import torch
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
+from mjlab_microduck.tasks.mdp._common import _finite
 
 
 class _SensorData:
@@ -89,7 +90,7 @@ def test_termination_ignores_missing_sensor():
 
 def test_finite_helper_sanitizes_nan_and_inf():
     x = torch.tensor([[1.0, float("nan"), float("inf"), float("-inf")]])
-    out = microduck_mdp._finite(x)
+    out = _finite(x)
     assert torch.isfinite(out).all()
     assert out[0, 0] == 1.0
 
@@ -122,7 +123,7 @@ def test_standup_env_is_also_guarded():
     # The deployed standing policy trains on StandUp, which builds on mjlab's
     # base env (NOT the microduck velocity env) and therefore does not inherit
     # the guards wired there.
-    from mjlab_microduck.tasks.microduck_standup_env_cfg import (
+    from mjlab_microduck.tasks.standup import (
         make_microduck_standup_env_cfg,
     )
 

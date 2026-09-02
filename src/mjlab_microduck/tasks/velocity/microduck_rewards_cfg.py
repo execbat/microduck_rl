@@ -9,7 +9,7 @@ from mjlab.tasks.velocity import mdp
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.utils.configclass import configclass
 
-from .cfg.rewards_cfg import RewardsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.rewards_cfg import RewardsCfg
 from .microduck_scene_cfg import SITE_NAMES
 
 # Pose reward std (deg-of-freedom deviation tolerance), tighter when standing.

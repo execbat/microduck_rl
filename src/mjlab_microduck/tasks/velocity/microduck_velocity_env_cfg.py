@@ -7,9 +7,9 @@ _cfg.py``, ``microduck_rewards_cfg.py``, ``microduck_commands_cfg.py``,
 ``microduck_events_cfg.py``, ``microduck_terminations_cfg.py``,
 ``microduck_curriculum_cfg.py``, ``microduck_scene_cfg.py``,
 ``microduck_flags.py``); this file only assembles them into env cfg classes,
-mirroring IsaacLab's own
-``G1RoughEnvCfg(LocomotionVelocityRoughEnvCfg)`` / ``G1RoughEnvCfg_PLAY`` /
-``G1FlatEnvCfg`` split.
+using a robot-independent flat base from ``tasks.locomotion.velocity``.
+The Microduck rough variant extends its flat recipe with robot-specific
+terrain settings.
 
 ``make_microduck_velocity_env_cfg(play=..., rough=...)`` keeps the exact same
 signature and return type (``mjlab.envs.ManagerBasedRlEnvCfg``) as before, so
@@ -26,7 +26,7 @@ from mjlab.terrains import TerrainEntityCfg
 
 from mjlab_microduck.utils.configclass import configclass
 
-from .locomotion_velocity_env_cfg import LocomotionVelocityRoughEnvCfg
+from mjlab_microduck.tasks.locomotion.velocity import LocomotionVelocityFlatEnvCfg
 from .microduck_commands_cfg import MicroduckCommandsCfg
 from .microduck_curriculum_cfg import MicroduckCurriculumCfg
 from .microduck_events_cfg import MicroduckEventsCfg
@@ -45,7 +45,7 @@ from .microduck_terminations_cfg import MicroduckTerminationsCfg
 
 
 @configclass
-class MicroduckVelocityFlatEnvCfg(LocomotionVelocityRoughEnvCfg):
+class MicroduckVelocityFlatEnvCfg(LocomotionVelocityFlatEnvCfg):
     """Microduck velocity task on a flat ground plane."""
 
     observations: MicroduckObservationsCfg = MicroduckObservationsCfg()
@@ -57,9 +57,8 @@ class MicroduckVelocityFlatEnvCfg(LocomotionVelocityRoughEnvCfg):
 
     def __post_init__(self):
         self.scene.entities = {"robot": MICRODUCK_WALK_ROBOT_CFG}
-        # Drop the generic terrain_scan placeholder sensor (unused -- this
-        # robot has no body-mounted terrain raycaster) and wire in the
-        # robot-specific foot/self-collision contact sensors instead.
+        # Wire robot-specific foot-height and contact sensors. The flat
+        # base does not create a body-mounted terrain scanner.
         self.scene.sensors = (feet_ground_cfg, self_collision_cfg, foot_height_scan_cfg)
         self.scene.terrain = TerrainEntityCfg(terrain_type="plane")
 

@@ -14,7 +14,7 @@ from mjlab.utils.noise import UniformNoiseCfg as Unoise
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.sitstand.microduck_flags import ENABLE_ENCODER_BIAS, IMU_ORIENTATION_RANDOMIZATION_ANGLE
-from mjlab_microduck.tasks.velocity.cfg.observations_cfg import CriticCfg, ObservationsCfg, PolicyCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.observations_cfg import CriticCfg, ObservationsCfg, PolicyCfg
 from mjlab_microduck.utils.configclass import configclass
 
 _PASSIVE_EXCLUDED = SceneEntityCfg("robot", joint_names=(r"^(?!passive_).*",))

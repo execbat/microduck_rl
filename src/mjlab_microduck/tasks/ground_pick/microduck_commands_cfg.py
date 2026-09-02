@@ -6,7 +6,7 @@ phase in [0, 0.5) = approach (go down), [0.5, 1) = return (come back up).
 All the base ``UniformVelocityCommandCfg`` fields not mentioned below
 (``resampling_time_range``, ``rel_forward_envs``, ``heading_command``,
 ``heading_control_stiffness``, ``debug_vis``, ``ranges``) are inherited
-unchanged from ``tasks/velocity/cfg/commands_cfg.py`` -- the original file
+unchanged from ``tasks/locomotion/velocity/cfg/commands_cfg.py`` -- the original file
 never touched them, since ``GroundPickPhaseCommand.compute()`` overwrites
 the whole command vector every step regardless.
 """
@@ -15,7 +15,7 @@ import math
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.ground_pick.microduck_flags import GP_PERIOD
-from mjlab_microduck.tasks.velocity.cfg.commands_cfg import CommandsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.commands_cfg import CommandsCfg
 from mjlab_microduck.utils.configclass import configclass
 
 

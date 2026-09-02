@@ -32,16 +32,17 @@ from mjlab.managers import (
 from mjlab.managers.scene_entity_config import SceneEntityCfg
 from mjlab.rl import (
     RslRlOnPolicyRunnerCfg,
-    RslRlPpoActorCriticCfg,
+    RslRlModelCfg,
     RslRlPpoAlgorithmCfg,
 )
 from mjlab.scene import SceneCfg
 from mjlab.sim import MujocoCfg, SimulationCfg
-from mjlab.terrains import TerrainImporterCfg
+from mjlab.terrains import TerrainEntityCfg
 from mjlab.utils.noise import UniformNoiseCfg as Unoise
 from mjlab.viewer import ViewerConfig
 
 from mjlab_microduck.robot.testbench_constants import XL330_TESTBENCH_ROBOT_CFG
+from mjlab_microduck.tasks.mdp.events import expand_bam_friction_fields
 
 
 # ----------------------------------------------------------------------------
@@ -89,6 +90,9 @@ class TargetAngleCommandCfg(CommandTermCfg):
     joint_name: str = "1"
     range: tuple[float, float] = (-TESTBENCH_MAX_ANGLE_RAD, TESTBENCH_MAX_ANGLE_RAD)
     resampling_time_range: tuple[float, float] = (4.0, 4.0)
+
+    def build(self, env: ManagerBasedRlEnv) -> TargetAngleCommand:
+        return TargetAngleCommand(self, env)
 
 
 # ----------------------------------------------------------------------------
@@ -170,7 +174,7 @@ def make_testbench_env_cfg(play: bool = False) -> ManagerBasedRlEnvCfg:
     action_scale = float(os.environ.get("TESTBENCH_ACTION_SCALE", "1.0"))
     actions = {
         "joint_pos": JointPositionActionCfg(
-            asset_name="robot",
+            entity_name="robot",
             actuator_names=("1",),
             scale=action_scale,
             use_default_offset=True,
@@ -190,6 +194,11 @@ def make_testbench_env_cfg(play: bool = False) -> ManagerBasedRlEnvCfg:
 
     # Events
     events = {
+        # BAM writes per-environment friction/damping fields every step.
+        "expand_bam_friction_fields": EventTermCfg(
+            func=expand_bam_friction_fields,
+            mode="startup",
+        ),
         "reset_joint": EventTermCfg(
             func=base_mdp.reset_joints_by_offset,
             mode="reset",
@@ -236,7 +245,7 @@ def make_testbench_env_cfg(play: bool = False) -> ManagerBasedRlEnvCfg:
 
     return ManagerBasedRlEnvCfg(
         scene=SceneCfg(
-            terrain=TerrainImporterCfg(terrain_type="plane"),
+            terrain=TerrainEntityCfg(terrain_type="plane"),
             entities={"robot": XL330_TESTBENCH_ROBOT_CFG},
             num_envs=1,
             extent=2.0,
@@ -250,7 +259,7 @@ def make_testbench_env_cfg(play: bool = False) -> ManagerBasedRlEnvCfg:
         curriculum={},
         viewer=ViewerConfig(
             origin_type=ViewerConfig.OriginType.ASSET_BODY,
-            asset_name="robot",
+            entity_name="robot",
             body_name="arm",
             distance=0.8,
             elevation=-15.0,
@@ -267,12 +276,22 @@ def make_testbench_env_cfg(play: bool = False) -> ManagerBasedRlEnvCfg:
 
 
 MicroduckTestbenchRlCfg = RslRlOnPolicyRunnerCfg(
-    policy=RslRlPpoActorCriticCfg(
-        init_noise_std=1.0,
-        actor_obs_normalization=False,
-        critic_obs_normalization=False,
-        actor_hidden_dims=(256, 128, 64),
-        critic_hidden_dims=(256, 128, 64),
+    # Preserve the testbench's existing "policy" observation group while
+    # using mjlab 1.3's separate actor/critic model configuration API.
+    obs_groups={"actor": ("policy",), "critic": ("critic",)},
+    actor=RslRlModelCfg(
+        hidden_dims=(256, 128, 64),
+        obs_normalization=False,
+        distribution_cfg={
+            "class_name": "GaussianDistribution",
+            "init_std": 1.0,
+            "std_type": "scalar",
+        },
+        activation="elu",
+    ),
+    critic=RslRlModelCfg(
+        hidden_dims=(256, 128, 64),
+        obs_normalization=False,
         activation="elu",
     ),
     algorithm=RslRlPpoAlgorithmCfg(

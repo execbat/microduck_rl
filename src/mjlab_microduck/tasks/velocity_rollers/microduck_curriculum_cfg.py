@@ -3,7 +3,7 @@
 from mjlab.managers.curriculum_manager import CurriculumTermCfg as CurrTerm
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
-from mjlab_microduck.tasks.velocity.cfg.curriculum_cfg import CurriculumCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.curriculum_cfg import CurriculumCfg
 from mjlab_microduck.tasks.velocity_rollers.microduck_flags import (
     ENABLE_COM_RANDOMIZATION,
     ENABLE_HEAD_COM_RANDOMIZATION,

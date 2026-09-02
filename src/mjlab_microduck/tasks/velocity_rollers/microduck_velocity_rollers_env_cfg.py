@@ -22,7 +22,7 @@ path. Symmetry OFF (SYMMETRY_CFG is hardcoded for the old 51D layout).
 
 from mjlab.terrains import TerrainEntityCfg
 
-from mjlab_microduck.tasks.velocity.locomotion_velocity_env_cfg import LocomotionVelocityRoughEnvCfg
+from mjlab_microduck.tasks.locomotion.velocity import LocomotionVelocityFlatEnvCfg
 from mjlab_microduck.utils.configclass import configclass
 
 from .microduck_commands_cfg import MicroduckCommandsCfg
@@ -35,7 +35,7 @@ from .microduck_terminations_cfg import MicroduckTerminationsCfg
 
 
 @configclass
-class MicroduckVelocityRollersEnvCfg(LocomotionVelocityRoughEnvCfg):
+class MicroduckVelocityRollersEnvCfg(LocomotionVelocityFlatEnvCfg):
     """Microduck velocity_rollers task -- flat terrain, roller skate gait."""
 
     observations: MicroduckObservationsCfg = MicroduckObservationsCfg()

@@ -13,7 +13,7 @@ from mjlab.tasks.velocity import mdp
 from mjlab.utils.noise import UniformNoiseCfg as Unoise
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
-from mjlab_microduck.tasks.velocity.cfg.observations_cfg import CriticCfg, ObservationsCfg, PolicyCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.observations_cfg import CriticCfg, ObservationsCfg, PolicyCfg
 from mjlab_microduck.tasks.velocity_rollers.microduck_flags import (
     ENABLE_ENCODER_BIAS,
     ENABLE_IMU_ORIENTATION_RANDOMIZATION,

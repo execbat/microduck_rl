@@ -1,4 +1,4 @@
-from mjlab_microduck.tasks.microduck_roller_slope_env_cfg import (
+from mjlab_microduck.tasks.roller_slope import (
     make_microduck_roller_slope_env_cfg,
 )
 from mjlab_microduck.tasks.slope_terrain import FlatRampTerrainCfg

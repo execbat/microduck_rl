@@ -41,7 +41,7 @@ from mjlab.terrains import TerrainEntityCfg
 
 from mjlab_microduck.utils.configclass import configclass
 
-from mjlab_microduck.tasks.velocity.locomotion_velocity_env_cfg import LocomotionVelocityRoughEnvCfg
+from mjlab_microduck.tasks.locomotion.velocity import LocomotionVelocityFlatEnvCfg
 
 from .microduck_commands_cfg import MicroduckCommandsCfg
 from .microduck_curriculum_cfg import MicroduckCurriculumCfg
@@ -54,7 +54,7 @@ from .microduck_terminations_cfg import MicroduckTerminationsCfg
 
 
 @configclass
-class MicroduckBallKickEnvCfg(LocomotionVelocityRoughEnvCfg):
+class MicroduckBallKickEnvCfg(LocomotionVelocityFlatEnvCfg):
     """Microduck BallKick task -- flat terrain, standing kick."""
 
     kick_foot: str = KICK_FOOT

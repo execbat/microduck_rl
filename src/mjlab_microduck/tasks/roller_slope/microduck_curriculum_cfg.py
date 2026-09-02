@@ -17,7 +17,7 @@ thrown straight onto a 20deg slope (where it face-plants).
 from mjlab.managers.curriculum_manager import CurriculumTermCfg as CurrTerm
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
-from mjlab_microduck.tasks.velocity.cfg.curriculum_cfg import CurriculumCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.curriculum_cfg import CurriculumCfg
 from mjlab_microduck.utils.configclass import configclass
 
 

@@ -9,7 +9,7 @@ from mjlab.tasks.velocity import mdp
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.ball_kick.microduck_flags import BALL_TARGET_SPEED, LEG_JOINTS, NECK_JOINTS, STAND_Z
 from mjlab_microduck.utils.configclass import configclass
-from mjlab_microduck.tasks.velocity.cfg.rewards_cfg import RewardsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.rewards_cfg import RewardsCfg
 
 
 @configclass

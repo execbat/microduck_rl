@@ -15,7 +15,7 @@ ignored, matching the original file's dead parameter -- same situation as
 
 from mjlab.terrains import TerrainEntityCfg
 
-from mjlab_microduck.tasks.velocity.locomotion_velocity_env_cfg import LocomotionVelocityRoughEnvCfg
+from mjlab_microduck.tasks.locomotion.velocity import LocomotionVelocityFlatEnvCfg
 from mjlab_microduck.tasks.velocity_rollers.microduck_observations_cfg import (
     MicroduckObservationsCfg as _RollersObservationsCfg,
 )
@@ -30,7 +30,7 @@ from .microduck_terminations_cfg import MicroduckTerminationsCfg
 
 
 @configclass
-class MicroduckRollerCrouchEnvCfg(LocomotionVelocityRoughEnvCfg):
+class MicroduckRollerCrouchEnvCfg(LocomotionVelocityFlatEnvCfg):
     """Microduck roller_crouch task -- flat terrain, crouch-glide trick."""
 
     # Observations are identical to velocity_rollers's (same robot, same

@@ -21,7 +21,7 @@ tasks/roulade/
   microduck_events_cfg.py           # MicroduckEventsCfg(EventsCfg)
   microduck_terminations_cfg.py     # MicroduckTerminationsCfg(TerminationsCfg) -- fell_over dropped
   microduck_curriculum_cfg.py       # MicroduckCurriculumCfg(CurriculumCfg) -- reverse-curriculum spawn mix
-  microduck_roulade_env_cfg.py      # MicroduckRouladeEnvCfg(LocomotionVelocityRoughEnvCfg)
+  microduck_roulade_env_cfg.py      # MicroduckRouladeEnvCfg(LocomotionVelocityFlatEnvCfg)
                                      # + make_microduck_roulade_env_cfg()
   microduck_rl_cfg.py               # MicroduckRouladeRlCfg (RSL-RL PPO)
   __init__.py

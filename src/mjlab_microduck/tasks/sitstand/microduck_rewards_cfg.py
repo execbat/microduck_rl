@@ -30,7 +30,7 @@ from mjlab_microduck.tasks.sitstand.microduck_flags import (
     STAND_UPRIGHT_Z,
     STAND_Z,
 )
-from mjlab_microduck.tasks.velocity.cfg.rewards_cfg import RewardsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.rewards_cfg import RewardsCfg
 from mjlab_microduck.utils.configclass import configclass
 
 

@@ -4,7 +4,7 @@ Unlike ``velocity_rollers`` (which this task shares a robot/obs layout
 with), the original file built its command from mjlab's raw base
 ``make_velocity_env_cfg()`` directly, not from velocity_rollers's modified
 one -- so the inherited defaults here are the STANDARD velocity command
-ranges (``tasks/velocity/cfg/commands_cfg.py``), not velocity_rollers's
+ranges (``tasks/locomotion/velocity/cfg/commands_cfg.py``), not velocity_rollers's
 ``RelativeHeadingVelocityCommandCfg`` ones. Only ``rel_standing_envs``/
 ``rel_heading_envs`` are overridden, plus the command TYPE, which is
 replaced entirely by the same cyclic phase encoder ``ground_pick`` uses:
@@ -21,7 +21,7 @@ import math
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.roller_crouch.microduck_flags import CROUCH_PERIOD
-from mjlab_microduck.tasks.velocity.cfg.commands_cfg import CommandsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.commands_cfg import CommandsCfg
 from mjlab_microduck.utils.configclass import configclass
 
 

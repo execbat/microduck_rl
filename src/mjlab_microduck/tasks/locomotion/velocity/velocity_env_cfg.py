@@ -1,18 +1,10 @@
-"""Generic ("rough terrain") velocity locomotion task, IsaacLab-style.
+"""Reusable velocity locomotion bases with explicit terrain selection.
 
-This mirrors the structure of ``isaaclab_tasks.manager_based.locomotion
-.velocity.velocity_env_cfg.LocomotionVelocityRoughEnvCfg``: one top-level
-``@configclass`` whose fields are the individual manager configs, each of
-which lives in its own file under ``cfg/``. A robot-specific task (see
-``microduck_velocity_env_cfg.py`` next to this file) subclasses this and
-overrides/extends fields, exactly like ``G1RoughEnvCfg(LocomotionVelocity
-RoughEnvCfg)`` does for Isaac Lab's own G1.
-
-The one thing that differs from "real" IsaacLab: the *runtime* here is mjlab,
-not Isaac Sim, and mjlab's managers want plain dicts rather than attribute
-containers. ``to_mjlab_cfg()`` is the single place that bridges the two --
-every other file in this package only ever deals with the declarative,
-attribute-style configs.
+``LocomotionVelocityEnvCfg`` supplies common managers and simulation settings
+without choosing terrain. The flat and rough subclasses choose their scene;
+only the rough base enables the body terrain scanner and terrain curriculum.
+Robot assets, sensor frames, and robot-specific terms belong to concrete tasks.
+``to_mjlab_cfg()`` converts declarative configs into mjlab's manager dictionaries.
 """
 
 from dataclasses import field
@@ -28,7 +20,17 @@ from mjlab.viewer import ViewerConfig
 from mjlab_microduck.utils.configclass import configclass
 from mjlab_microduck.utils.manager_compat import group_to_dict, observations_to_dict
 
-from .cfg import ActionsCfg, CommandsCfg, CurriculumCfg, EventsCfg, ObservationsCfg, RewardsCfg, TerminationsCfg
+from .cfg import (
+    ActionsCfg,
+    CommandsCfg,
+    CurriculumCfg,
+    EventsCfg,
+    ObservationsCfg,
+    RewardsCfg,
+    RoughCurriculumCfg,
+    RoughObservationsCfg,
+    TerminationsCfg,
+)
 
 # Sensor names referenced by the base observation/reward terms (see cfg/*.py).
 # Frames are left unset here ("" / ()) -- a robot cfg must wire them to real
@@ -61,17 +63,13 @@ FOOT_HEIGHT_SCAN_SENSOR = TerrainHeightSensorCfg(
 
 
 @configclass
-class LocomotionVelocityRoughEnvCfg:
-    """Generic rough-terrain velocity-tracking locomotion task."""
+class LocomotionVelocityEnvCfg:
+    """Terrain-neutral velocity template; concrete tasks supply the robot."""
 
     # -- Managers (one component per file under cfg/) ---------------------
     scene: SceneCfg = SceneCfg(
-        terrain=TerrainEntityCfg(
-            terrain_type="generator",
-            terrain_generator=ROUGH_TERRAINS_CFG,
-            max_init_terrain_level=5,
-        ),
-        sensors=(TERRAIN_SCAN_SENSOR, FOOT_HEIGHT_SCAN_SENSOR),
+        terrain=None,
+        sensors=(FOOT_HEIGHT_SCAN_SENSOR,),
         num_envs=1,
         extent=2.0,
     )
@@ -123,3 +121,35 @@ class LocomotionVelocityRoughEnvCfg:
             viewer=self.viewer,
             episode_length_s=self.episode_length_s,
         )
+
+
+@configclass
+class LocomotionVelocityFlatEnvCfg(LocomotionVelocityEnvCfg):
+    """Velocity template on a plane, without body terrain observations."""
+
+    scene: SceneCfg = SceneCfg(
+        terrain=TerrainEntityCfg(terrain_type="plane"),
+        sensors=(FOOT_HEIGHT_SCAN_SENSOR,),
+        num_envs=1,
+        extent=2.0,
+    )
+
+
+@configclass
+class LocomotionVelocityRoughEnvCfg(LocomotionVelocityEnvCfg):
+    """Velocity template with procedural terrain, height scans and curriculum."""
+
+    # configclass deep-copies the entire scene (including the generator and
+    # sensors) per instance, so play-mode edits cannot change other configs.
+    scene: SceneCfg = SceneCfg(
+        terrain=TerrainEntityCfg(
+            terrain_type="generator",
+            terrain_generator=ROUGH_TERRAINS_CFG,
+            max_init_terrain_level=5,
+        ),
+        sensors=(TERRAIN_SCAN_SENSOR, FOOT_HEIGHT_SCAN_SENSOR),
+        num_envs=1,
+        extent=2.0,
+    )
+    observations: RoughObservationsCfg = RoughObservationsCfg()
+    curriculum: RoughCurriculumCfg = RoughCurriculumCfg()

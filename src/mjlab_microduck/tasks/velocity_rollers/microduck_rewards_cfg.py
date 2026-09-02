@@ -7,7 +7,7 @@ from mjlab.managers.scene_entity_config import SceneEntityCfg
 from mjlab.tasks.velocity import mdp
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
-from mjlab_microduck.tasks.velocity.cfg.rewards_cfg import RewardsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.rewards_cfg import RewardsCfg
 from mjlab_microduck.utils.configclass import configclass
 
 # passive_.*: 999.0 -> passive wheel joints are matched but effectively ignored.

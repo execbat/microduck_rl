@@ -16,7 +16,7 @@ from mjlab.utils.noise import UniformNoiseCfg as Unoise
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.ball_kick.microduck_flags import IMU_ORIENTATION_RANDOMIZATION_ANGLE
 from mjlab_microduck.utils.configclass import configclass
-from mjlab_microduck.tasks.velocity.cfg.observations_cfg import CriticCfg, ObservationsCfg, PolicyCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.observations_cfg import CriticCfg, ObservationsCfg, PolicyCfg
 
 # Excludes the passive_* joints (jaw linkage) so the observation dim matches
 # the action dim (14) instead of the raw articulation (16).

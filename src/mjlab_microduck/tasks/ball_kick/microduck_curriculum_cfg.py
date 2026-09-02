@@ -11,7 +11,7 @@ from mjlab_microduck.tasks.ball_kick.microduck_flags import (
 )
 from mjlab_microduck.utils.configclass import configclass
 
-from mjlab_microduck.tasks.velocity.cfg.curriculum_cfg import CurriculumCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.curriculum_cfg import CurriculumCfg
 
 _N = 24  # num_steps_per_env (see MicroduckBallKickRlCfg)
 

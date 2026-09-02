@@ -10,7 +10,7 @@ from bam.mjlab import BamActuatorCfg
 
 
 _TESTBENCH_DIR: Path = Path(os.path.dirname(__file__)) / "xl330_test_bench"
-# Use the robot-only XML (no floor / no lights): mjlab's TerrainImporterCfg
+# Use the robot-only XML (no floor / no lights): mjlab's TerrainEntityCfg
 # adds its own ground plane, so scene.xml would give a duplicated floor.
 TESTBENCH_XML: Path = _TESTBENCH_DIR / "xl330_test_bench.xml"
 

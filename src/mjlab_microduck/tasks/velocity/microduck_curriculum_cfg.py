@@ -5,7 +5,7 @@ from mjlab.managers.curriculum_manager import CurriculumTermCfg as CurrTerm
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.utils.configclass import configclass
 
-from .cfg.curriculum_cfg import CurriculumCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.curriculum_cfg import CurriculumCfg
 from .microduck_flags import ENABLE_COM_RANDOMIZATION, ENABLE_HEAD_COM_RANDOMIZATION, NUM_STEPS_PER_ENV
 
 _N = NUM_STEPS_PER_ENV

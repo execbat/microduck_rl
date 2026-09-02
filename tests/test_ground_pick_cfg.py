@@ -1,4 +1,4 @@
-from mjlab_microduck.tasks.microduck_ground_pick_env_cfg import (
+from mjlab_microduck.tasks.ground_pick import (
     make_microduck_ground_pick_env_cfg,
 )
 from mjlab_microduck.tasks.mdp import GroundPickPhaseCommand

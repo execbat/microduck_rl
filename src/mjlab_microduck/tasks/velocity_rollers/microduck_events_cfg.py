@@ -15,7 +15,7 @@ from mjlab.managers.scene_entity_config import SceneEntityCfg
 from mjlab.tasks.velocity import mdp
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
-from mjlab_microduck.tasks.velocity.cfg.events_cfg import EventsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.events_cfg import EventsCfg
 from mjlab_microduck.tasks.velocity.microduck_flags import HEAD_BODY_NAMES
 from mjlab_microduck.tasks.velocity_rollers.microduck_flags import (
     ARMATURE_RANDOMIZATION_RANGE,

@@ -10,7 +10,7 @@ from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.ball_kick.microduck_flags import EPISODE_LENGTH_S
 from mjlab_microduck.utils.configclass import configclass
 
-from mjlab_microduck.tasks.velocity.cfg.commands_cfg import CommandsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.commands_cfg import CommandsCfg
 
 
 @configclass

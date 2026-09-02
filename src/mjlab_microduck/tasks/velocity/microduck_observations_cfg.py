@@ -26,7 +26,7 @@ from mjlab.utils.noise import UniformNoiseCfg as Unoise
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.utils.configclass import configclass
 
-from .cfg.observations_cfg import CriticCfg, ObservationsCfg, PolicyCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.observations_cfg import CriticCfg, ObservationsCfg, PolicyCfg
 from .microduck_flags import ENABLE_ENCODER_BIAS, ENABLE_IMU_ORIENTATION_RANDOMIZATION, IMU_ORIENTATION_RANDOMIZATION_ANGLE, USE_PROJECTED_GRAVITY
 
 # Exclude passive_* joints (jaw linkage) so the observation dim matches the

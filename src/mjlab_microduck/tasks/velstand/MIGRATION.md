@@ -37,13 +37,13 @@ unmodified.
 ## The one genuinely different thing about this task: it subclasses a sibling task's ENV CFG classes, not just its manager configs
 
 Every other task that "builds on" a sibling (`ball_kick`, `ground_pick`, ...)
-subclasses `LocomotionVelocityRoughEnvCfg` directly and reuses the sibling's
-manager-*config* classes (`tasks.velocity.cfg.*`). `velstand` is different:
+subclasses `LocomotionVelocityFlatEnvCfg` directly and reuses the sibling's
+manager-*config* classes (`tasks.locomotion.velocity.cfg.*`). `velstand` is different:
 the original file's `cfg = make_microduck_velocity_env_cfg(play=play,
 rough=rough)` call means it's built on velocity's *fully assembled,
 robot-specific* config -- so `MicroduckVelstandFlatEnvCfg` subclasses
 `tasks.velocity.MicroduckVelocityFlatEnvCfg` itself (not just the shared
-`LocomotionVelocityRoughEnvCfg` base), and similarly `RoughEnvCfg`
+`LocomotionVelocityFlatEnvCfg` base), and similarly `RoughEnvCfg`
 subclasses velocity's `MicroduckVelocityRoughEnvCfg`. This is exactly the
 "straightforward subclass" case the `velocity` MIGRATION.md's recipe
 anticipated for this specific task.
@@ -123,7 +123,7 @@ points:
    assembled* factory function** (`make_microduck_velocity_env_cfg(...)`,
    not `make_velocity_env_cfg()`), subclass the sibling's actual env-cfg
    classes (`MicroduckVelocityFlatEnvCfg`/`RoughEnvCfg`), not just the
-   shared `LocomotionVelocityRoughEnvCfg` base — this pulls in every
+   shared `LocomotionVelocityFlatEnvCfg` base — this pulls in every
    manager the task doesn't explicitly override, exactly matching the
    original's "verbatim" inheritance.
 2. **Never subclass a sibling's `_PLAY` variant class directly** if your

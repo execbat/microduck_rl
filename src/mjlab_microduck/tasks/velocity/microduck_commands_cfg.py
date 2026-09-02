@@ -7,7 +7,7 @@ from mjlab.tasks.velocity.mdp import UniformVelocityCommandCfg
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.utils.configclass import configclass
 
-from .cfg.commands_cfg import CommandsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.commands_cfg import CommandsCfg
 from .microduck_flags import BODY_POSE_CMD_RESAMPLE_S, HEAD_POSE_CMD_RESAMPLE_S, TURN_IN_PLACE_FRACTION
 
 

@@ -16,7 +16,7 @@ from mjlab_microduck.tasks.roller_crouch.microduck_flags import (
     RISE_END,
     STAND_POSE,
 )
-from mjlab_microduck.tasks.velocity.cfg.rewards_cfg import RewardsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.rewards_cfg import RewardsCfg
 from mjlab_microduck.utils.configclass import configclass
 
 _PHASE_PARAMS = {

@@ -38,7 +38,7 @@ from mjlab_microduck.tasks.roulade.microduck_flags import (
     ROULADE_FORWARD_VEL_RANGE,
     TUCK_OVERRIDES,
 )
-from mjlab_microduck.tasks.velocity.cfg.events_cfg import EventsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.events_cfg import EventsCfg
 from mjlab_microduck.tasks.velocity.microduck_flags import HEAD_BODY_NAMES
 from mjlab_microduck.utils.configclass import configclass
 

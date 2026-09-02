@@ -3,7 +3,7 @@
 Same situation as ``roller_crouch``: the original file built its command
 from mjlab's raw base ``make_velocity_env_cfg()`` directly, not from
 ``velocity_rollers``'s modified one -- so the inherited defaults here are
-the STANDARD velocity command ranges (``tasks/velocity/cfg/commands_cfg.py``).
+the STANDARD velocity command ranges (``tasks/locomotion/velocity/cfg/commands_cfg.py``).
 Only ``rel_standing_envs``/``rel_heading_envs`` are overridden, plus the
 command TYPE, replaced by the same cyclic phase encoder ``ground_pick``/
 ``roller_crouch`` use: ``command = [cos(2*pi*phase), sin(2*pi*phase), 0]``.
@@ -18,7 +18,7 @@ phase 0.
 import math
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
-from mjlab_microduck.tasks.velocity.cfg.commands_cfg import CommandsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.commands_cfg import CommandsCfg
 from mjlab_microduck.utils.configclass import configclass
 
 SPIN_PERIOD = microduck_mdp.SPIN_PERIOD

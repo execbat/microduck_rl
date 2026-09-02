@@ -26,7 +26,7 @@ tasks/spin/
   microduck_events_cfg.py           # MicroduckEventsCfg(EventsCfg)
   microduck_terminations_cfg.py     # MicroduckTerminationsCfg(TerminationsCfg)
   microduck_curriculum_cfg.py       # MicroduckCurriculumCfg(CurriculumCfg)
-  microduck_spin_env_cfg.py         # MicroduckSpinEnvCfg(LocomotionVelocityRoughEnvCfg)
+  microduck_spin_env_cfg.py         # MicroduckSpinEnvCfg(LocomotionVelocityFlatEnvCfg)
                                      # + make_microduck_spin_env_cfg()
   microduck_rl_cfg.py               # MicroduckSpinRlCfg (RSL-RL PPO)
   __init__.py

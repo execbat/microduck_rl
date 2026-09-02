@@ -23,17 +23,16 @@ tasks/ball_kick/
   microduck_rewards_cfg.py       # MicroduckRewardsCfg(RewardsCfg)
   microduck_terminations_cfg.py  # MicroduckTerminationsCfg(TerminationsCfg)
   microduck_curriculum_cfg.py    # MicroduckCurriculumCfg(CurriculumCfg)
-  microduck_ball_kick_env_cfg.py # MicroduckBallKickEnvCfg(LocomotionVelocityRoughEnvCfg)
+  microduck_ball_kick_env_cfg.py # MicroduckBallKickEnvCfg(LocomotionVelocityFlatEnvCfg)
                                   # + make_microduck_ball_kick_env_cfg()
   microduck_rl_cfg.py            # MicroduckBallKickRlCfg (RSL-RL PPO)
   __init__.py
 ```
 
 No new `cfg/` folder here — `ball_kick` reuses the *same* generic base
-component files as `tasks/velocity/cfg/` (it's built on
+component files as `tasks/locomotion/velocity/cfg/` (it's built on
 `make_velocity_env_cfg()` too, just like the original file was), by
-subclassing `tasks.velocity.locomotion_velocity_env_cfg.LocomotionVelocity
-RoughEnvCfg` directly. This is the "several tasks build on top of
+subclassing `tasks.locomotion.velocity.LocomotionVelocityFlatEnvCfg` directly. This is the "several tasks build on top of
 `make_microduck_velocity_env_cfg()`" case the velocity MIGRATION.md flagged
 as the easy path.
 
@@ -111,11 +110,11 @@ Same recipe as the velocity MIGRATION.md, refined by two data points now:
 1. If the task builds on `make_microduck_velocity_env_cfg()` /
    `make_velocity_env_cfg()` and doesn't need its own rough-terrain
    sub-terrain config, **don't re-create a `cfg/` folder** — subclass
-   `tasks.velocity.locomotion_velocity_env_cfg.LocomotionVelocityRoughEnvCfg`
+   `tasks.locomotion.velocity.LocomotionVelocityFlatEnvCfg`
    (or, if it explicitly calls `make_microduck_velocity_env_cfg()` itself
    like `microduck_velstand_env_cfg.py` does, subclass
    `tasks.velocity.MicroduckVelocityFlatEnvCfg`/`RoughEnvCfg` instead) and
-   reuse `tasks/velocity/cfg/*` directly.
+   reuse `tasks/locomotion/velocity/cfg/*` directly.
 2. Before splitting rewards/events/curriculum into files, **grep the target
    file for any comment about ordering** ("must come after", "insertion
    order", "before the X curriculum removes it", etc.) — those are the

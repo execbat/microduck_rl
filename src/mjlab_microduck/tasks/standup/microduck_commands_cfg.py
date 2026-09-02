@@ -16,7 +16,7 @@ from mjlab_microduck.tasks.standup.microduck_flags import (
     ENABLE_BODY_CONTROL,
     EPISODE_LENGTH_S,
 )
-from mjlab_microduck.tasks.velocity.cfg.commands_cfg import CommandsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.commands_cfg import CommandsCfg
 from mjlab_microduck.tasks.velocity.microduck_flags import BODY_POSE_CMD_RESAMPLE_S, HEAD_POSE_CMD_RESAMPLE_S
 from mjlab_microduck.utils.configclass import configclass
 

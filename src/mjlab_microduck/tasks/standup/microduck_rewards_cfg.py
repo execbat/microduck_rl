@@ -31,7 +31,7 @@ from mjlab.tasks.velocity import mdp
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.standup.microduck_flags import ENABLE_BODY_CONTROL, LEG_JOINTS, STAND_Z
-from mjlab_microduck.tasks.velocity.cfg.rewards_cfg import RewardsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.rewards_cfg import RewardsCfg
 from mjlab_microduck.utils.configclass import configclass
 
 

@@ -42,7 +42,7 @@ from mjlab_microduck.tasks.ball_kick.microduck_flags import (
 )
 from mjlab_microduck.tasks.velocity.microduck_flags import HEAD_BODY_NAMES
 from mjlab_microduck.utils.configclass import configclass
-from mjlab_microduck.tasks.velocity.cfg.events_cfg import EventsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.events_cfg import EventsCfg
 
 from .microduck_scene_cfg import FOOT_FRICTION_GEOM_NAMES
 

@@ -1,6 +1,6 @@
 """Observation specifications for the velocity locomotion task.
 
-Generic defaults here mirror mjlab's own ``make_velocity_env_cfg()``. A
+Common defaults omit body terrain scans; rough variants opt into them. A
 robot-specific env cfg (e.g. ``MicroduckObservationsCfg``) subclasses
 ``PolicyCfg``/``CriticCfg`` to add/remove/override terms.
 """
@@ -50,12 +50,8 @@ class PolicyCfg(ObsGroup):
         func=mdp.generated_commands,
         params={"command_name": "twist"},
     )
-    height_scan: ObsTerm | None = ObsTerm(
-        func=envs_mdp.height_scan,
-        params={"sensor_name": "terrain_scan"},
-        noise=Unoise(n_min=-0.1, n_max=0.1),
-        scale=1 / _TERRAIN_SCAN_MAX_DISTANCE,
-    )
+    # Reserve the field position to preserve observation order in subclasses.
+    height_scan: ObsTerm | None = None
 
     def __post_init__(self):
         self.enable_corruption = True
@@ -70,11 +66,6 @@ class CriticCfg(PolicyCfg):
     noise/corruption -- the critic sees ground truth).
     """
 
-    height_scan: ObsTerm | None = ObsTerm(
-        func=envs_mdp.height_scan,
-        params={"sensor_name": "terrain_scan"},
-        scale=1 / _TERRAIN_SCAN_MAX_DISTANCE,
-    )
     foot_height: ObsTerm | None = ObsTerm(
         func=mdp.foot_height,
         params={"sensor_name": "foot_height_scan"},
@@ -103,3 +94,34 @@ class ObservationsCfg:
 
     actor: PolicyCfg = PolicyCfg()
     critic: CriticCfg = CriticCfg()
+
+
+@configclass
+class RoughPolicyCfg(PolicyCfg):
+    """Actor observations including a noisy body terrain scan."""
+
+    height_scan: ObsTerm | None = ObsTerm(
+        func=envs_mdp.height_scan,
+        params={"sensor_name": "terrain_scan"},
+        noise=Unoise(n_min=-0.1, n_max=0.1),
+        scale=1 / _TERRAIN_SCAN_MAX_DISTANCE,
+    )
+
+
+@configclass
+class RoughCriticCfg(CriticCfg):
+    """Privileged observations including an uncorrupted body terrain scan."""
+
+    height_scan: ObsTerm | None = ObsTerm(
+        func=envs_mdp.height_scan,
+        params={"sensor_name": "terrain_scan"},
+        scale=1 / _TERRAIN_SCAN_MAX_DISTANCE,
+    )
+
+
+@configclass
+class RoughObservationsCfg(ObservationsCfg):
+    """Observation groups for the generic rough-terrain template."""
+
+    actor: RoughPolicyCfg = RoughPolicyCfg()
+    critic: RoughCriticCfg = RoughCriticCfg()

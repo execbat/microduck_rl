@@ -14,7 +14,7 @@ two active commands).
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.sitstand.microduck_flags import POSTURE_DWELL_S, POSTURE_RAMP_S, SIT_PROB, SIT_Z, STAND_Z
-from mjlab_microduck.tasks.velocity.cfg.commands_cfg import CommandsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.commands_cfg import CommandsCfg
 from mjlab_microduck.tasks.velocity.microduck_flags import HEAD_POSE_CMD_RESAMPLE_S
 from mjlab_microduck.utils.configclass import configclass
 

@@ -47,7 +47,7 @@ from mjlab.managers.curriculum_manager import CurriculumTermCfg as CurrTerm
 from mjlab.tasks.velocity import mdp
 from mjlab.terrains import TerrainEntityCfg
 
-from mjlab_microduck.tasks.velocity.locomotion_velocity_env_cfg import LocomotionVelocityRoughEnvCfg
+from mjlab_microduck.tasks.locomotion.velocity import LocomotionVelocityFlatEnvCfg
 from mjlab_microduck.tasks.velocity.microduck_scene_cfg import MICRODUCK_ROUGH_TERRAINS_CFG
 from mjlab_microduck.utils.configclass import configclass
 
@@ -62,7 +62,7 @@ from .microduck_terminations_cfg import MicroduckTerminationsCfg
 
 
 @configclass
-class MicroduckSitStandFlatEnvCfg(LocomotionVelocityRoughEnvCfg):
+class MicroduckSitStandFlatEnvCfg(LocomotionVelocityFlatEnvCfg):
     """Microduck sitstand task on a flat ground plane."""
 
     observations: MicroduckObservationsCfg = MicroduckObservationsCfg()

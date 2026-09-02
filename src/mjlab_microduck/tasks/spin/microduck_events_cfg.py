@@ -27,7 +27,7 @@ from mjlab_microduck.tasks.spin.microduck_flags import (
     VELOCITY_PUSH_INTERVAL_S,
     VELOCITY_PUSH_RANGE,
 )
-from mjlab_microduck.tasks.velocity.cfg.events_cfg import EventsCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.events_cfg import EventsCfg
 from mjlab_microduck.tasks.velocity.microduck_flags import HEAD_BODY_NAMES
 from mjlab_microduck.utils.configclass import configclass
 

@@ -1,10 +1,11 @@
 import pytest
 
-from mjlab_microduck.tasks.microduck_roller_standup_env_cfg import (
-    EPISODE_LENGTH_S,
+from mjlab_microduck.tasks.roller_standup.microduck_flags import EPISODE_LENGTH_S
+
+from mjlab_microduck.tasks.roller_standup import (
     make_microduck_roller_standup_env_cfg,
 )
-from mjlab_microduck.tasks.microduck_velocity_rollers_env_cfg import (
+from mjlab_microduck.tasks.velocity_rollers import (
     make_microduck_velocity_rollers_env_cfg,
 )
 
@@ -129,10 +130,10 @@ def test_joint_indices_match_actual_roller_model():
     import mujoco
 
     from mjlab_microduck.robot.microduck_constants import get_walk_rollers_spec
-    from mjlab_microduck.tasks.microduck_roller_standup_env_cfg import (
-        _LEG_JOINTS,
-        _NECK_JOINTS,
-        _WHEEL_JOINTS,
+    from mjlab_microduck.tasks.roller_standup.microduck_flags import (
+        LEG_JOINTS as _LEG_JOINTS,
+        NECK_JOINTS as _NECK_JOINTS,
+        WHEEL_JOINTS as _WHEEL_JOINTS,
     )
 
     model = get_walk_rollers_spec().compile()
@@ -183,7 +184,7 @@ def test_recovery_rewards_present_with_expected_weights():
 
 
 def test_recovery_rewards_use_roller_heights_not_walker_heights():
-    from mjlab_microduck.tasks.microduck_roller_standup_env_cfg import (
+    from mjlab_microduck.tasks.roller_standup.microduck_flags import (
         ROLLER_PRONE_Z,
         ROLLER_STAND_Z,
     )
@@ -201,12 +202,15 @@ def test_recovery_rewards_use_roller_heights_not_walker_heights():
     assert cfg.rewards["upright_sharp"].params["height_high"] == ROLLER_STAND_Z
 
 
-def test_pose_rewards_target_legs_only_at_roller_indices():
-    from mjlab_microduck.tasks.microduck_roller_standup_env_cfg import _LEG_JOINTS
+def test_pose_rewards_target_legs_only_at_servo_indices():
+    from mjlab_microduck.tasks.roller_standup.microduck_flags import SERVO_LEG_JOINTS
 
     cfg = make_microduck_roller_standup_env_cfg()
+    # These reward functions use _servo_joint_pos(), which filters passive
+    # wheels before indexing. Raw 18-joint model indices are tested above.
+    assert SERVO_LEG_JOINTS == [0, 1, 2, 3, 4, 9, 10, 11, 12, 13]
     for name in ("pose_stand_legs", "pose_stand_l1", "standing_composite"):
-        assert cfg.rewards[name].params["joint_indices"] == _LEG_JOINTS
+        assert cfg.rewards[name].params["joint_indices"] == SERVO_LEG_JOINTS
         # target_overrides=None → la cible est HOME (default_joint_pos).
         assert cfg.rewards[name].params["target_overrides"] is None
 

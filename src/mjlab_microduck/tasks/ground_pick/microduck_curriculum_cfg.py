@@ -1,16 +1,14 @@
 """Curriculum specifications for the Microduck ground_pick task.
 
-``terrain_levels`` is kept inherited unchanged from the base
-``CurriculumCfg`` (rough-compatible) -- the Flat env cfg variant disables it
-in its own ``__post_init__`` instead, matching the original file's
-``if not rough: del cfg.curriculum["terrain_levels"]``.
+The shared base leaves terrain progression disabled. The task's rough
+variant enables it explicitly; flat variants retain the disabled slot.
 """
 
 from mjlab.managers.curriculum_manager import CurriculumTermCfg as CurrTerm
 
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.ground_pick.microduck_flags import ENABLE_COM_RANDOMIZATION, ENABLE_HEAD_COM_RANDOMIZATION
-from mjlab_microduck.tasks.velocity.cfg.curriculum_cfg import CurriculumCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.curriculum_cfg import CurriculumCfg
 from mjlab_microduck.utils.configclass import configclass
 
 _N = 24  # num_steps_per_env (see MicroduckGroundPickRlCfg)

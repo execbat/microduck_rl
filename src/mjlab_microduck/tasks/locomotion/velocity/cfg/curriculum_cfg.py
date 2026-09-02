@@ -10,10 +10,8 @@ from mjlab_microduck.utils.configclass import configclass
 class CurriculumCfg:
     """Curriculum terms for the MDP."""
 
-    terrain_levels: CurrTerm | None = CurrTerm(
-        func=mdp.terrain_levels_vel,
-        params={"command_name": "twist"},
-    )
+    # Keep a disabled slot so enabling this in a subclass preserves term order.
+    terrain_levels: CurrTerm | None = None
     command_vel: CurrTerm | None = CurrTerm(
         func=mdp.commands_vel,
         params={
@@ -24,4 +22,14 @@ class CurriculumCfg:
                 {"step": 10000 * 24, "lin_vel_x": (-2.0, 3.0)},
             ],
         },
+    )
+
+
+@configclass
+class RoughCurriculumCfg(CurriculumCfg):
+    """Common velocity curriculum plus procedural-terrain progression."""
+
+    terrain_levels: CurrTerm | None = CurrTerm(
+        func=mdp.terrain_levels_vel,
+        params={"command_name": "twist"},
     )

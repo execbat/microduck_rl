@@ -1,8 +1,7 @@
 """Curriculum specifications for the Microduck sitstand task.
 
-``terrain_levels`` is kept inherited unchanged from the base
-``CurriculumCfg`` (rough-compatible) -- the Flat env cfg variant disables it
-in its own ``__post_init__`` instead, same pattern as ``ground_pick``.
+The shared base leaves terrain progression disabled. The task's rough
+variant enables it explicitly; flat variants retain the disabled slot.
 """
 
 from mjlab.managers.curriculum_manager import CurriculumTermCfg as CurrTerm
@@ -14,7 +13,7 @@ from mjlab_microduck.tasks.sitstand.microduck_flags import (
     ENABLE_VELOCITY_PUSHES,
     VELOCITY_PUSH_RANGE,
 )
-from mjlab_microduck.tasks.velocity.cfg.curriculum_cfg import CurriculumCfg
+from mjlab_microduck.tasks.locomotion.velocity.cfg.curriculum_cfg import CurriculumCfg
 from mjlab_microduck.utils.configclass import configclass
 
 _N = 24  # num_steps_per_env (see MicroduckSitStandRlCfg)
