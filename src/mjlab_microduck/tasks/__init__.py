@@ -51,7 +51,7 @@ from .roller_crouch import (
     make_microduck_roller_crouch_env_cfg,
     MicroduckRollerCrouchRlCfg,
 )
-from .microduck_roller_slope_env_cfg import (
+from .roller_slope import (
     make_microduck_roller_slope_env_cfg,
     MicroduckRollerSlopeRlCfg,
 )
