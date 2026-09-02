@@ -23,7 +23,7 @@ from .standup import (
     make_microduck_standup_env_cfg,
     MicroduckStandUpRlCfg,
 )
-from .microduck_velstand_env_cfg import (
+from .velstand import (
     make_microduck_velstand_env_cfg,
     MicroduckVelStandRlCfg,
 )

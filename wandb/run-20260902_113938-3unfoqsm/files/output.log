@@ -1,0 +1,332 @@
+Storing git diff for 'microduck_rl' in: logs/rsl_rl/velstand/2026-09-02_11-39-33_velstand/git/microduck_rl.diff
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+################################################################################
+[1m                             Learning iteration 0/5                             [0m
+
+                               Run name: velstand
+                            Total steps: 24
+                       Steps per second: 26
+                        Collection time: 0.709s
+                          Learning time: 0.183s
+                        Mean value loss: 0.0196
+                    Mean surrogate loss: -0.0928
+                      Mean entropy loss: 19.8631
+                        Mean action std: 1.00
+   Episode_Reward/track_linear_velocity: 0.0000
+  Episode_Reward/track_angular_velocity: 0.0000
+                 Episode_Reward/upright: 0.0000
+                    Episode_Reward/pose: 0.0000
+            Episode_Reward/body_ang_vel: 0.0000
+        Episode_Reward/angular_momentum: 0.0000
+          Episode_Reward/dof_pos_limits: 0.0000
+          Episode_Reward/action_rate_l2: 0.0000
+                Episode_Reward/air_time: 0.0000
+          Episode_Reward/foot_clearance: 0.0000
+       Episode_Reward/foot_swing_height: 0.0000
+               Episode_Reward/foot_slip: 0.0000
+         Episode_Reward/self_collisions: 0.0000
+      Episode_Reward/head_pose_tracking: 0.0000
+      Episode_Reward/body_pose_tracking: 0.0000
+          Episode_Reward/head_pose_bias: 0.0000
+        Episode_Reward/upright_progress: 0.0000
+         Episode_Reward/height_progress: 0.0000
+     Episode_Reward/com_upward_velocity: 0.0000
+    Episode_Reward/joint_torque_rate_l2: 0.0000
+              Episode_Reward/fallen_tax: 0.0000
+        Episode_Reward/recovery_success: 0.0000
+         Curriculum/terrain_levels/mean: 1.0000
+          Curriculum/terrain_levels/max: 1.0000
+          Curriculum/action_rate_weight: -0.1000
+               Curriculum/standing_envs: 0.0200
+             Curriculum/head_pose_range: 0.0700
+             Curriculum/body_pose_range: 0.0500
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+       Curriculum/head_pose_bias_weight: 0.0000
+           Curriculum/fell_over_disable: 1.2217
+             Curriculum/prone_init_prob: 0.0000
+           Curriculum/fallen_tax_weight: 0.0000
+     Curriculum/recovery_success_weight: 0.0000
+           Curriculum/com_upward_weight: 0.0000
+             Metrics/twist/error_vel_xy: 0.0000
+            Metrics/twist/error_vel_yaw: 0.0000
+           Episode_Termination/time_out: 0.0000
+          Episode_Termination/fell_over: 0.0000
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+    Episode_Termination/fallen_too_long: 0.0000
+          Metrics/angular_momentum_mean: 0.0164
+                  Metrics/air_time_mean: 0.1050
+               Metrics/peak_height_mean: 0.0000
+             Metrics/slip_velocity_mean: 0.0428
+--------------------------------------------------------------------------------
+                         Iteration time: 0.89s
+                           Time elapsed: 00:00:00
+                                    ETA: 00:00:03
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+
+################################################################################
+[1m                             Learning iteration 1/5                             [0m
+
+                               Run name: velstand
+                            Total steps: 48
+                       Steps per second: 27
+                        Collection time: 0.800s
+                          Learning time: 0.081s
+                        Mean value loss: 0.0846
+                    Mean surrogate loss: -0.0752
+                      Mean entropy loss: 19.8632
+                            Mean reward: 0.04
+                    Mean episode length: 34.00
+                        Mean action std: 1.00
+   Episode_Reward/track_linear_velocity: 0.0146
+  Episode_Reward/track_angular_velocity: 0.0012
+                 Episode_Reward/upright: 0.0132
+                    Episode_Reward/pose: 0.0055
+            Episode_Reward/body_ang_vel: -0.0140
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0003
+          Episode_Reward/action_rate_l2: -0.0447
+                Episode_Reward/air_time: 0.0000
+          Episode_Reward/foot_clearance: -0.0006
+       Episode_Reward/foot_swing_height: -0.0022
+               Episode_Reward/foot_slip: -0.0000
+         Episode_Reward/self_collisions: 0.0000
+      Episode_Reward/head_pose_tracking: 0.0319
+      Episode_Reward/body_pose_tracking: 0.0000
+          Episode_Reward/head_pose_bias: 0.0000
+        Episode_Reward/upright_progress: -0.0023
+         Episode_Reward/height_progress: -0.0007
+     Episode_Reward/com_upward_velocity: 0.0000
+    Episode_Reward/joint_torque_rate_l2: -0.0001
+              Episode_Reward/fallen_tax: 0.0000
+        Episode_Reward/recovery_success: 0.0000
+         Curriculum/terrain_levels/mean: 0.3750
+          Curriculum/terrain_levels/max: 0.3750
+          Curriculum/action_rate_weight: -0.1000
+               Curriculum/standing_envs: 0.0200
+             Curriculum/head_pose_range: 0.0700
+             Curriculum/body_pose_range: 0.0500
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+       Curriculum/head_pose_bias_weight: 0.0000
+           Curriculum/fell_over_disable: 1.2217
+             Curriculum/prone_init_prob: 0.0000
+           Curriculum/fallen_tax_weight: 0.0000
+     Curriculum/recovery_success_weight: 0.0000
+           Curriculum/com_upward_weight: 0.0000
+             Metrics/twist/error_vel_xy: 0.0162
+            Metrics/twist/error_vel_yaw: 0.0989
+           Episode_Termination/time_out: 0.0000
+          Episode_Termination/fell_over: 0.6250
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+    Episode_Termination/fallen_too_long: 0.0000
+          Metrics/angular_momentum_mean: 0.0223
+                  Metrics/air_time_mean: 0.0406
+               Metrics/peak_height_mean: 0.0000
+             Metrics/slip_velocity_mean: 0.1179
+--------------------------------------------------------------------------------
+                         Iteration time: 0.88s
+                           Time elapsed: 00:00:01
+                                    ETA: 00:00:02
+
+################################################################################
+[1m                             Learning iteration 2/5                             [0m
+
+                               Run name: velstand
+                            Total steps: 72
+                       Steps per second: 39
+                        Collection time: 0.529s
+                          Learning time: 0.079s
+                        Mean value loss: 0.0689
+                    Mean surrogate loss: -0.1032
+                      Mean entropy loss: 19.8609
+                            Mean reward: 0.12
+                    Mean episode length: 29.50
+                        Mean action std: 1.00
+   Episode_Reward/track_linear_velocity: 0.0271
+  Episode_Reward/track_angular_velocity: 0.0014
+                 Episode_Reward/upright: 0.0182
+                    Episode_Reward/pose: 0.0073
+            Episode_Reward/body_ang_vel: -0.0200
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0005
+          Episode_Reward/action_rate_l2: -0.0659
+                Episode_Reward/air_time: 0.0000
+          Episode_Reward/foot_clearance: -0.0005
+       Episode_Reward/foot_swing_height: -0.0030
+               Episode_Reward/foot_slip: -0.0001
+         Episode_Reward/self_collisions: 0.0000
+      Episode_Reward/head_pose_tracking: 0.0470
+      Episode_Reward/body_pose_tracking: 0.0000
+          Episode_Reward/head_pose_bias: 0.0000
+        Episode_Reward/upright_progress: -0.0035
+         Episode_Reward/height_progress: -0.0009
+     Episode_Reward/com_upward_velocity: 0.0000
+    Episode_Reward/joint_torque_rate_l2: -0.0002
+              Episode_Reward/fallen_tax: 0.0000
+        Episode_Reward/recovery_success: 0.0000
+         Curriculum/terrain_levels/mean: 0.0000
+          Curriculum/terrain_levels/max: 0.0000
+          Curriculum/action_rate_weight: -0.1000
+               Curriculum/standing_envs: 0.0200
+             Curriculum/head_pose_range: 0.0700
+             Curriculum/body_pose_range: 0.0500
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+       Curriculum/head_pose_bias_weight: 0.0000
+           Curriculum/fell_over_disable: 1.2217
+             Curriculum/prone_init_prob: 0.0000
+           Curriculum/fallen_tax_weight: 0.0000
+     Curriculum/recovery_success_weight: 0.0000
+           Curriculum/com_upward_weight: 0.0000
+             Metrics/twist/error_vel_xy: 0.0179
+            Metrics/twist/error_vel_yaw: 0.1423
+           Episode_Termination/time_out: 0.0000
+          Episode_Termination/fell_over: 1.0000
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+    Episode_Termination/fallen_too_long: 0.0000
+          Metrics/angular_momentum_mean: 0.0215
+                  Metrics/air_time_mean: 0.0537
+               Metrics/peak_height_mean: 0.0031
+             Metrics/slip_velocity_mean: 0.3170
+--------------------------------------------------------------------------------
+                         Iteration time: 0.61s
+                           Time elapsed: 00:00:02
+                                    ETA: 00:00:01
+
+################################################################################
+[1m                             Learning iteration 3/5                             [0m
+
+                               Run name: velstand
+                            Total steps: 96
+                       Steps per second: 39
+                        Collection time: 0.535s
+                          Learning time: 0.078s
+                        Mean value loss: 0.0592
+                    Mean surrogate loss: -0.1160
+                      Mean entropy loss: 19.8578
+                            Mean reward: 0.05
+                    Mean episode length: 27.67
+                        Mean action std: 1.00
+   Episode_Reward/track_linear_velocity: 0.0198
+  Episode_Reward/track_angular_velocity: 0.0011
+                 Episode_Reward/upright: 0.0171
+                    Episode_Reward/pose: 0.0058
+            Episode_Reward/body_ang_vel: -0.0179
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0002
+          Episode_Reward/action_rate_l2: -0.0602
+                Episode_Reward/air_time: 0.0000
+          Episode_Reward/foot_clearance: -0.0002
+       Episode_Reward/foot_swing_height: -0.0025
+               Episode_Reward/foot_slip: -0.0001
+         Episode_Reward/self_collisions: 0.0000
+      Episode_Reward/head_pose_tracking: 0.0434
+      Episode_Reward/body_pose_tracking: 0.0000
+          Episode_Reward/head_pose_bias: 0.0000
+        Episode_Reward/upright_progress: -0.0034
+         Episode_Reward/height_progress: -0.0009
+     Episode_Reward/com_upward_velocity: 0.0000
+    Episode_Reward/joint_torque_rate_l2: -0.0002
+              Episode_Reward/fallen_tax: 0.0000
+        Episode_Reward/recovery_success: 0.0000
+         Curriculum/terrain_levels/mean: 0.0000
+          Curriculum/terrain_levels/max: 0.0000
+          Curriculum/action_rate_weight: -0.1000
+               Curriculum/standing_envs: 0.0200
+             Curriculum/head_pose_range: 0.0700
+             Curriculum/body_pose_range: 0.0500
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+       Curriculum/head_pose_bias_weight: 0.0000
+           Curriculum/fell_over_disable: 1.2217
+             Curriculum/prone_init_prob: 0.0000
+           Curriculum/fallen_tax_weight: 0.0000
+     Curriculum/recovery_success_weight: 0.0000
+           Curriculum/com_upward_weight: 0.0000
+             Metrics/twist/error_vel_xy: 0.0176
+            Metrics/twist/error_vel_yaw: 0.1238
+           Episode_Termination/time_out: 0.0000
+          Episode_Termination/fell_over: 1.0000
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+    Episode_Termination/fallen_too_long: 0.0000
+          Metrics/angular_momentum_mean: 0.0106
+                  Metrics/air_time_mean: 0.0146
+               Metrics/peak_height_mean: 0.0009
+             Metrics/slip_velocity_mean: 0.0598
+--------------------------------------------------------------------------------
+                         Iteration time: 0.61s
+                           Time elapsed: 00:00:02
+                                    ETA: 00:00:00
+
+################################################################################
+[1m                             Learning iteration 4/5                             [0m
+
+                               Run name: velstand
+                            Total steps: 120
+                       Steps per second: 40
+                        Collection time: 0.516s
+                          Learning time: 0.078s
+                        Mean value loss: 0.0159
+                    Mean surrogate loss: -0.1062
+                      Mean entropy loss: 19.8551
+                            Mean reward: 0.05
+                    Mean episode length: 27.67
+                        Mean action std: 1.00
+   Episode_Reward/track_linear_velocity: 0.0127
+  Episode_Reward/track_angular_velocity: 0.0011
+                 Episode_Reward/upright: 0.0177
+                    Episode_Reward/pose: 0.0054
+            Episode_Reward/body_ang_vel: -0.0177
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/dof_pos_limits: -0.0000
+          Episode_Reward/action_rate_l2: -0.0590
+                Episode_Reward/air_time: 0.0000
+          Episode_Reward/foot_clearance: -0.0003
+       Episode_Reward/foot_swing_height: -0.0024
+               Episode_Reward/foot_slip: -0.0001
+         Episode_Reward/self_collisions: 0.0000
+      Episode_Reward/head_pose_tracking: 0.0430
+      Episode_Reward/body_pose_tracking: 0.0000
+          Episode_Reward/head_pose_bias: 0.0000
+        Episode_Reward/upright_progress: -0.0034
+         Episode_Reward/height_progress: -0.0010
+     Episode_Reward/com_upward_velocity: 0.0000
+    Episode_Reward/joint_torque_rate_l2: -0.0002
+              Episode_Reward/fallen_tax: 0.0000
+        Episode_Reward/recovery_success: 0.0000
+         Curriculum/terrain_levels/mean: 0.0000
+          Curriculum/terrain_levels/max: 0.0000
+          Curriculum/action_rate_weight: -0.1000
+               Curriculum/standing_envs: 0.0200
+             Curriculum/head_pose_range: 0.0700
+             Curriculum/body_pose_range: 0.0500
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+       Curriculum/head_pose_bias_weight: 0.0000
+           Curriculum/fell_over_disable: 1.2217
+             Curriculum/prone_init_prob: 0.0000
+           Curriculum/fallen_tax_weight: 0.0000
+     Curriculum/recovery_success_weight: 0.0000
+           Curriculum/com_upward_weight: 0.0000
+             Metrics/twist/error_vel_xy: 0.0215
+            Metrics/twist/error_vel_yaw: 0.1188
+           Episode_Termination/time_out: 0.0000
+          Episode_Termination/fell_over: 1.0000
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+    Episode_Termination/fallen_too_long: 0.0000
+          Metrics/angular_momentum_mean: 0.0159
+                  Metrics/air_time_mean: 0.0325
+               Metrics/peak_height_mean: 0.0000
+             Metrics/slip_velocity_mean: 0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 0.59s
+                           Time elapsed: 00:00:03
+                                    ETA: 00:00:00
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
