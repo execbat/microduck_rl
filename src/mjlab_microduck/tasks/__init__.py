@@ -43,7 +43,7 @@ from .velocity_rollers import (
     make_microduck_velocity_rollers_env_cfg,
     MicroduckRollersRlCfg,
 )
-from .microduck_velocity_swizzle_env_cfg import (
+from .velocity_swizzle import (
     make_microduck_velocity_swizzle_env_cfg,
     MicroduckSwizzleRlCfg,
 )
