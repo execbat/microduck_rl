@@ -43,3 +43,10 @@ logdir/.claude/worktrees/
 microduck_tasks_rewards_penalties_events.xlsx
 /logs/
 /wandb/
+
+ Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
