@@ -1,0 +1,201 @@
+Storing git diff for 'microduck_rl' in: logs/rsl_rl/roller_crouch/2026-09-02_09-57-30_roller_crouch/git/microduck_rl.diff
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+/home/johnny/Documents/ISAACLAB/microduck_rl/.venv/lib/python3.12/site-packages/mjlab/sim/sim_data.py:71: UserWarning: Use of index_put_ on expanded tensors is deprecated. Please clone() the tensor before performing this operation. This also applies to advanced indexing e.g. tensor[indices] = tensor (Triggered internally at /pytorch/aten/src/ATen/native/TensorAdvancedIndexing.cpp:972.)
+  self._tensor[idx] = value
+################################################################################
+[1m                             Learning iteration 0/5                             [0m
+
+                               Run name: roller_crouch
+                            Total steps: 384
+                       Steps per second: 187
+                        Collection time: 1.905s
+                          Learning time: 0.141s
+                        Mean value loss: 21.1240
+                    Mean surrogate loss: -0.0415
+                      Mean entropy loss: 19.8664
+                            Mean reward: -12.36
+                    Mean episode length: 22.17
+                        Mean action std: 1.00
+                 Episode_Reward/upright: 0.0043
+            Episode_Reward/body_ang_vel: -0.0037
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/action_rate_l2: -0.1184
+       Episode_Reward/crouch_glide_pose: 0.0131
+    Episode_Reward/crouch_glide_pose_l1: -0.0044
+           Episode_Reward/forward_speed: 0.0013
+     Episode_Reward/crouch_forward_lean: 0.0000
+               Episode_Reward/feet_flat: -0.0017
+         Episode_Reward/self_collisions: -0.0002
+     Episode_Reward/neck_action_rate_l2: -0.0173
+        Episode_Reward/joint_torques_l2: -0.0000
+          Curriculum/action_rate_weight: -0.8958
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+           Episode_Termination/time_out: 0.0000
+          Episode_Termination/fell_over: 0.3333
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0197
+--------------------------------------------------------------------------------
+                         Iteration time: 2.05s
+                           Time elapsed: 00:00:02
+                                    ETA: 00:00:08
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+
+################################################################################
+[1m                             Learning iteration 1/5                             [0m
+
+                               Run name: roller_crouch
+                            Total steps: 768
+                       Steps per second: 418
+                        Collection time: 0.834s
+                          Learning time: 0.082s
+                        Mean value loss: 4.8193
+                    Mean surrogate loss: -0.0647
+                      Mean entropy loss: 19.8642
+                            Mean reward: -11.68
+                    Mean episode length: 25.50
+                        Mean action std: 1.00
+                 Episode_Reward/upright: 0.0336
+            Episode_Reward/body_ang_vel: -0.0200
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/action_rate_l2: -0.6251
+       Episode_Reward/crouch_glide_pose: 0.0802
+    Episode_Reward/crouch_glide_pose_l1: -0.0331
+           Episode_Reward/forward_speed: 0.0110
+     Episode_Reward/crouch_forward_lean: 0.0022
+               Episode_Reward/feet_flat: -0.0095
+         Episode_Reward/self_collisions: -0.0026
+     Episode_Reward/neck_action_rate_l2: -0.1095
+        Episode_Reward/joint_torques_l2: -0.0001
+          Curriculum/action_rate_weight: -0.5000
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+           Episode_Termination/time_out: 0.0000
+          Episode_Termination/fell_over: 1.1250
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0169
+--------------------------------------------------------------------------------
+                         Iteration time: 0.92s
+                           Time elapsed: 00:00:02
+                                    ETA: 00:00:04
+
+################################################################################
+[1m                             Learning iteration 2/5                             [0m
+
+                               Run name: roller_crouch
+                            Total steps: 1152
+                       Steps per second: 444
+                        Collection time: 0.778s
+                          Learning time: 0.086s
+                        Mean value loss: 4.9918
+                    Mean surrogate loss: -0.0625
+                      Mean entropy loss: 19.8593
+                            Mean reward: -10.12
+                    Mean episode length: 25.33
+                        Mean action std: 1.00
+                 Episode_Reward/upright: 0.0267
+            Episode_Reward/body_ang_vel: -0.0200
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/action_rate_l2: -0.3260
+       Episode_Reward/crouch_glide_pose: 0.0670
+    Episode_Reward/crouch_glide_pose_l1: -0.0255
+           Episode_Reward/forward_speed: 0.0097
+     Episode_Reward/crouch_forward_lean: 0.0017
+               Episode_Reward/feet_flat: -0.0057
+         Episode_Reward/self_collisions: -0.0000
+     Episode_Reward/neck_action_rate_l2: -0.0920
+        Episode_Reward/joint_torques_l2: -0.0000
+          Curriculum/action_rate_weight: -0.5000
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+           Episode_Termination/time_out: 0.0000
+          Episode_Termination/fell_over: 1.5417
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0143
+--------------------------------------------------------------------------------
+                         Iteration time: 0.86s
+                           Time elapsed: 00:00:03
+                                    ETA: 00:00:02
+
+################################################################################
+[1m                             Learning iteration 3/5                             [0m
+
+                               Run name: roller_crouch
+                            Total steps: 1536
+                       Steps per second: 446
+                        Collection time: 0.778s
+                          Learning time: 0.081s
+                        Mean value loss: 3.2802
+                    Mean surrogate loss: -0.0639
+                      Mean entropy loss: 19.8560
+                            Mean reward: -9.73
+                    Mean episode length: 25.98
+                        Mean action std: 1.00
+                 Episode_Reward/upright: 0.0295
+            Episode_Reward/body_ang_vel: -0.0211
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/action_rate_l2: -0.3959
+       Episode_Reward/crouch_glide_pose: 0.0786
+    Episode_Reward/crouch_glide_pose_l1: -0.0306
+           Episode_Reward/forward_speed: 0.0085
+     Episode_Reward/crouch_forward_lean: 0.0032
+               Episode_Reward/feet_flat: -0.0086
+         Episode_Reward/self_collisions: -0.0003
+     Episode_Reward/neck_action_rate_l2: -0.1176
+        Episode_Reward/joint_torques_l2: -0.0001
+          Curriculum/action_rate_weight: -0.5000
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+           Episode_Termination/time_out: 0.0000
+          Episode_Termination/fell_over: 1.3333
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0153
+--------------------------------------------------------------------------------
+                         Iteration time: 0.86s
+                           Time elapsed: 00:00:04
+                                    ETA: 00:00:01
+
+################################################################################
+[1m                             Learning iteration 4/5                             [0m
+
+                               Run name: roller_crouch
+                            Total steps: 1920
+                       Steps per second: 442
+                        Collection time: 0.786s
+                          Learning time: 0.082s
+                        Mean value loss: 3.3979
+                    Mean surrogate loss: -0.0630
+                      Mean entropy loss: 19.8545
+                            Mean reward: -9.18
+                    Mean episode length: 25.30
+                        Mean action std: 1.00
+                 Episode_Reward/upright: 0.0222
+            Episode_Reward/body_ang_vel: -0.0175
+        Episode_Reward/angular_momentum: -0.0000
+          Episode_Reward/action_rate_l2: -0.2976
+       Episode_Reward/crouch_glide_pose: 0.0656
+    Episode_Reward/crouch_glide_pose_l1: -0.0217
+           Episode_Reward/forward_speed: 0.0026
+     Episode_Reward/crouch_forward_lean: 0.0009
+               Episode_Reward/feet_flat: -0.0090
+         Episode_Reward/self_collisions: -0.0014
+     Episode_Reward/neck_action_rate_l2: -0.0891
+        Episode_Reward/joint_torques_l2: -0.0000
+          Curriculum/action_rate_weight: -0.5000
+                   Curriculum/com_range: 0.0030
+              Curriculum/head_com_range: 0.0030
+           Episode_Termination/time_out: 0.0000
+          Episode_Termination/fell_over: 1.2083
+Episode_Termination/out_of_terrain_bounds: 0.0000
+          Episode_Termination/nan_state: 0.0000
+          Metrics/angular_momentum_mean: 0.0158
+--------------------------------------------------------------------------------
+                         Iteration time: 0.87s
+                           Time elapsed: 00:00:05
+                                    ETA: 00:00:00
+[34m[1mwandb[0m: [33mWARNING[0m Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.

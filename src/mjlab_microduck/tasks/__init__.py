@@ -47,7 +47,7 @@ from .microduck_velocity_swizzle_env_cfg import (
     make_microduck_velocity_swizzle_env_cfg,
     MicroduckSwizzleRlCfg,
 )
-from .microduck_roller_crouch_env_cfg import (
+from .roller_crouch import (
     make_microduck_roller_crouch_env_cfg,
     MicroduckRollerCrouchRlCfg,
 )
